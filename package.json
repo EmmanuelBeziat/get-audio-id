@@ -1,6 +1,6 @@
 {
   "name": "get-audio-id",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "JS tool to parse audio services (Spotify, Deezer) url to get a song ID.",
   "main": "index.js",
   "scripts": {
