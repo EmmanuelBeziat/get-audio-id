@@ -7,7 +7,7 @@ module.exports = function (str) {
 	}
 
 	if (/<iframe/ig.test(str)) {
-		str = getStr(str)
+		str = getSrc(str)
 	}
 
 	// Remove surrounding whitespaces or linefeeds
