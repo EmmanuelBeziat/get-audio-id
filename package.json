@@ -1,5 +1,5 @@
 {
-  "name": "get-spotify-id",
+  "name": "get-audio-id",
   "version": "1.0.0",
   "description": "JS tool to parse spotify url to get a song ID.",
   "main": "index.js",
@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/EmmanuelBeziat/get-spotify-id/issues"
   },
-  "homepage": "https://github.com/EmmanuelBeziat/get-spotify-id#readme"
+  "homepage": "https://github.com/EmmanuelBeziat/get-spotify-id#readme",
+  "dependencies": {
+    "get-src": "^1.0.1"
+  }
 }
