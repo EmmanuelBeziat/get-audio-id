@@ -77,6 +77,6 @@ function deezer (str) {
 	}
 
 	if (url.test(str)) {
-		return str.split(open)[1]
+		return str.split(url)[1]
 	}
 }
