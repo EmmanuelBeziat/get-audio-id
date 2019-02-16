@@ -41,11 +41,11 @@ module.exports = function (str) {
  * @returns { string | undefined }
  */
 function spotify (str) {
-	var open = /https:\/\/open\.spotify\.com\/track\//gmi
+	var open = /https:\/\/open\.spotify\.com\/(embed\/)?track\//gmi
 	var url = /spotify:track:/gmi
 
 	if (open.test(str)) {
-		return str.split(open)[1]
+		return str.split(open)[2]
 	}
 
 	if (url.test(str)) {
