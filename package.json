@@ -15,7 +15,7 @@
     "javascript-tools",
     "audio"
   ],
-  "author": "Emmanuel Béziat",
+  "author": "Emmanuel Béziat <contact@emmanuelbeziat>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/EmmanuelBeziat/get-audio-id/issues"
