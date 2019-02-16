@@ -16,7 +16,7 @@ $ npm install --save get-audio-id
 Just call the function and give it a spotify url (or embed string). Its metadata (id and service) will be extracted.
 
 ```javascript
-const getAudioId = require('get-audio-id)
+const getAudioId = require('get-audio-id')
 
 getAudioId('https://open.spotify.com/track/2LfMWfjk9wIGv9sGTjhg85')
 // => {id: '2LfMWfjk9wIGv9sGTjhg85', service: 'spotify' }
