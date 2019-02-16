@@ -1,0 +1,24 @@
+{
+  "name": "get-spotify-id",
+  "version": "1.0.0",
+  "description": "JS tool to parse spotify url to get a song ID.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EmmanuelBeziat/get-spotify-id.git"
+  },
+  "keywords": [
+    "javascript",
+    "javascript-tools",
+    "spotify"
+  ],
+  "author": "Emmanuel Béziat",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EmmanuelBeziat/get-spotify-id/issues"
+  },
+  "homepage": "https://github.com/EmmanuelBeziat/get-spotify-id#readme"
+}
