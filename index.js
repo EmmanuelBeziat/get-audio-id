@@ -10,6 +10,9 @@ module.exports = function (str) {
 		str = getSrc(str)
 	}
 
+	// remove any `www.`
+	str = str.replace('/www.', '/')
+
 	// Remove surrounding whitespaces or linefeeds
 	str = str.trim()
 
@@ -32,6 +35,13 @@ module.exports = function (str) {
 		}
 	}
 
+	else if (/deezer/.test(str)) {
+		metadata = {
+			id: deezer(str),
+			service: 'deezer'
+		}
+	}
+
 	return metadata
 }
 
@@ -50,5 +60,23 @@ function spotify (str) {
 
 	if (url.test(str)) {
 		return str.split(url)[1]
+	}
+}
+
+/**
+ * Get the Deezer ID
+ * @param str { string } the url from wich you want to extract the id
+ * @returns { string | undefined }
+ */
+function deezer (str) {
+	var url = /https:\/\/deezer.com\/track\//gmi
+
+	// Remove any parameter
+	if (str.indexOf('?') > -1) {
+		str = str.split('?')[0];
+	}
+
+	if (url.test(str)) {
+		return str.split(open)[1]
 	}
 }
