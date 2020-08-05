@@ -1,12 +1,12 @@
 {
   "name": "get-audio-id",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "JS tool to parse audio streaming services (Spotify, Deezer, …) url to get a song ID.",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
-	},
-	"type": "module",
+  },
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/EmmanuelBeziat/get-audio-id.git"
