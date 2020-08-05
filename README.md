@@ -1,5 +1,5 @@
 # 🔉 get-audio-id
-JS tool to parse music streaming services url to get a song ID.
+JS tool to parse music streaming services url (Spotify, Deezer, Youtube, …) to get a song ID.
 
 > *Important Note:* This work is a fork-ish of [get-video-id](https://github.com/radiovisual/get-video-id) from [@radiovisual](https://github.com/radiovisual), but meant to use audio services (Spotify, Deezer, etc.). Credits for the work should go to him.
 
@@ -28,16 +28,25 @@ Just call the class with a spotify/deezer url (or embed string) as a parameter. 
 ```javascript
 import GetAudioId from 'get-audio-id'
 
-const audio = new GetAudioId('spotify:track:2LfMWfjk9wIGv9sGTjhg85')
+const audio = new GetAudioId('spotify:track:5uunXHE4kIW6uS4HWAXaOQ')
 
 audio.getId()
-// => {id: '2LfMWfjk9wIGv9sGTjhg85', service: 'spotify' }
+// => {id: '5uunXHE4kIW6uS4HWAXaOQ', service: 'spotify' }
 ```
 
 You can throw it a few types of url/strings:
 
-```javascript
-const audio = new GetAudioId('https://open.spotify.com/track/2LfMWfjk9wIGv9sGTjhg85')
+```
+'spotify:track:5uunXHE4kIW6uS4HWAXaOQ',
+'https://open.spotify.com/track/5uunXHE4kIW6uS4HWAXaOQ',
+'https://open.spotify.com/track/5uunXHE4kIW6uS4HWAXaOQ?si=6DD5tNAsRWieSursZHRm0A',
+'<iframe src="https://open.spotify.com/embed/track/5uunXHE4kIW6uS4HWAXaOQ" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
+'https://www.deezer.com/en/track/126338363',
+'https://www.youtube.com/watch?v=iVvXB-Vwnco',
+'https://www.youtube.com/watch?v=iVvXB-Vwnco&feature=youtu.be&t=172',
+'https://youtu.be/iVvXB-Vwnco',
+'https://youtu.be/iVvXB-Vwnco?t=106',
+'<iframe width="560" height="315" src="https://www.youtube.com/embed/iVvXB-Vwnco" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
 ```
 
 # Need more services?

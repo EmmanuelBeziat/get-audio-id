@@ -13,6 +13,7 @@ const errorInfos = {
 const songInfos = {
 	song: 'Silvera',
 	spotifyId: '5uunXHE4kIW6uS4HWAXaOQ',
+	spotifyOpen: 'spotify:track:5uunXHE4kIW6uS4HWAXaOQ',
 	spotifyURI: 'spotify:track:5uunXHE4kIW6uS4HWAXaOQ',
 	spotifyURL: 'https://open.spotify.com/track/5uunXHE4kIW6uS4HWAXaOQ',
 	spotifyURLWithParam: 'https://open.spotify.com/track/5uunXHE4kIW6uS4HWAXaOQ?si=6DD5tNAsRWieSursZHRm0A',
@@ -59,6 +60,10 @@ describe('GetAudioId', () => {
 	})
 
 	describe('#spotify', () => {
+		it('should return the track ID from open protocol', () => {
+			assert.strictEqual(audio.spotify(audio.cleanUp(songInfos.spotifyOpen)), songInfos.spotifyId, 'The returned spotify ID wasn’t equal to expected ID')
+		})
+
 		it('should return the track ID from URI', () => {
 			assert.strictEqual(audio.spotify(audio.cleanUp(songInfos.spotifyURI)), songInfos.spotifyId, 'The returned spotify ID wasn’t equal to expected ID')
 		})
